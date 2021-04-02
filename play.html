@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play free games!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- in te future try to make each page separate for each game-->
+    
+
+  <header>
+    <h1>Play best games for free!</h1>
+  </header>
+
+  <nav id="main">
+    <ul>
+      <li class="logo"><a href="#">LOST.</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Logical</a></li>
+      <li><a href="#">Puzzle</a></li>
+      <li><a href="#">Cards</a></li>
+      <li><a href="#">Board</a></li>
+      <li><a href="#">Girl</a></li>
+      <li><a href="#">Sport</a></li>
+    </ul>
+  </nav>
+
+  <div class="site-wrap" id='txtPlaceholder'>
+    This is a very simple site
+  </div>
+
+<script>
+    const x = JSON.parse(sessionStorage.getItem('contactOptions'))
+    console.log(x[0])
+    //window.alert(x[0].name)
+    console.log($('#txtPlaceholder').text())
+    const oldText = $('#txtPlaceholder').text()
+    const newText = oldText + ", created for: " + x[0].name
+    $('#txtPlaceholder').text(newText)
+
+</script>
+
+</body>
+</html>
