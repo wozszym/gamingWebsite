@@ -15,7 +15,7 @@ body {
 }
 
 .site-wrap {
-  max-width: 700px;
+  max-width: 1500px;
   margin: 70px auto;
   background: white;
   padding: 40px;
@@ -152,3 +152,19 @@ nav a:hover {
     background-color: #E0C91F;
 }
 /*Cookie Consent End*/
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cardHover {
+  transition: transform 0.2s;
+}
+
+.cardHover:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}

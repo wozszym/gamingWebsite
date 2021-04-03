@@ -18,7 +18,7 @@
   <nav id="main">
     <ul>
       <li class="logo"><a href="#">LOST.</a></li>
-      <li><a href="#">Home</a></li>
+      <li><a href="/index.html">Home</a></li>
       <li><a href="#">Action</a></li>
       <li><a href="#">Logical</a></li>
       <li><a href="#">Puzzle</a></li>
@@ -32,18 +32,11 @@
   <div class="site-wrap" id='txtPlaceholder'>
     This is a very simple site
   </div>
+  <div class="site-wrap" id='iframePlaceHolder'></div>
+  
 
   <script src = "/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js""></script>
-<script>
-    const x = JSON.parse(sessionStorage.getItem('contactOptions'))
-    console.log(x[0])
-    //window.alert(x[0].name)
-    console.log($('#txtPlaceholder').text())
-    const oldText = $('#txtPlaceholder').text()
-    const newText = oldText + ", created for: " + x[0].name
-    $('#txtPlaceholder').text(newText)
-
-</script>
+  <script src="playJs.js"></script>
 
 </body>
 </html>
