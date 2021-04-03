@@ -35,19 +35,19 @@ const listOfGames = [
         name: 'Impostor',
         image: 'https://files.cdn.spilcloud.com/thumbs-0-3/200X120_177703_1611403044.png',
         cathegories: ['best', 'action'],
-        iFrameData: '<iframe src="https://html5.gamedistribution.com/9abe6af0fbb440b98a3e24bf7fb0636a/" width="800" height="600" scrolling="none" frameborder="0"></iframe>'
+        iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/166486" width="800" height="600" frameborder="no" scrolling="no"></iframe>'
     },
     {
         name: 'Shaun the Sheep: Baahmy Golf',
         image: 'https://files.cdn.spilcloud.com/gms_s/1617208168_462x250_Shaun-the-sheep-baahmy-golf.jpg',
         cathegories: ['best', 'action'],
-        iFrameData: '<iframe src="https://html5.gamedistribution.com/f31e49a239ea4685aec9e0f80798bb1c/" width="1280" height="720" scrolling="none" frameborder="0"></iframe>'
+        iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/167007" width="900" height="550" frameborder="no" scrolling="no"></iframe>'
     },
     {
         name: 'Stickman Archer 2',
         image: 'https://files.cdn.spilcloud.com/thumbs-3-1/200X120_170631_1503928241.png',
         cathegories: ['best', 'sport'],
-        iFrameData: '<iframe src="https://html5.gamedistribution.com/0456e9546b6b43ce892c11da41630d12/" width="800" height="500" scrolling="none" frameborder="0"></iframe>'
+        iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/144162" width="800" height="500" frameborder="no" scrolling="no"></iframe>'
     }
 ]
 
