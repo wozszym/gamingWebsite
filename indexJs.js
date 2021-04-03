@@ -48,6 +48,18 @@ const listOfGames = [
         image: 'https://files.cdn.spilcloud.com/thumbs-3-1/200X120_170631_1503928241.png',
         cathegories: ['best', 'sport'],
         iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/144162" width="800" height="500" frameborder="no" scrolling="no"></iframe>'
+    },
+    {
+        name: 'Police Chase',
+        image: 'https://www.freeonlinegames.com/games/163946/medium.jpg?1594827083',
+        cathegories: ['best', 'action'],
+        iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/163946" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
+    },
+    {
+        name: 'Break Tris',
+        image: 'https://www.htmlgames.com/uploaded/thumb/bricktetris300200.jpg',
+        cathegories: ['best', 'action'],
+        iFrameData: '<iframe src="https://cdn.htmlgames.com/BreakTris/" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
     }
 ]
 
@@ -81,3 +93,4 @@ listOfGames.forEach(gameObject => {
 
 // https://www.creativebloq.com/how-to/hide-your-javascript-code-from-view-source
 // https://obfuscator.io/
+// https://www.freeonlinegames.com/tag/archery-games/stickman-archer-2
