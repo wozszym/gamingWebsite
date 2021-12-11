@@ -60,6 +60,12 @@ const listOfGames = [
         image: 'https://www.htmlgames.com/uploaded/thumb/bricktetris300200.jpg',
         cathegories: ['best', 'action'],
         iFrameData: '<iframe src="https://cdn.htmlgames.com/BreakTris/" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
+    },
+    {
+        name: 'Brain Trainer',
+        image: 'https://www.mindgames.com/uploaded/thumb/tinglybraintrainer300.jpg',
+        cathegories: ['best', 'action'],
+        iFrameData: '<iframe src="https://games.coolgames.com/brain-trainer/en/3.0/index.html" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
     }
 ]
 
@@ -94,3 +100,10 @@ listOfGames.forEach(gameObject => {
 // https://www.creativebloq.com/how-to/hide-your-javascript-code-from-view-source
 // https://obfuscator.io/
 // https://www.freeonlinegames.com/tag/archery-games/stickman-archer-2
+// https://www.coolgames.com/for-publishers/
+// https://www.coolmathgames.com/
+// https://www.htmlgames.com/
+// https://play.idevgames.co.uk/game/tetris-t-crisis
+
+// try to use games from: https://www.htmlgames.com/
+// which seem to be free
