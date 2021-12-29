@@ -34,49 +34,42 @@ const listOfGames = [
     {
         name: 'Impostor',
         image: 'https://files.cdn.spilcloud.com/thumbs-0-3/200X120_177703_1611403044.png',
-        cathegories: ['best', 'action'],
+        categories: ['best', 'action'],
         iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/166486" width="800" height="600" frameborder="no" scrolling="no"></iframe>'
     },
     {
         name: 'Shaun the Sheep: Baahmy Golf',
         image: 'https://files.cdn.spilcloud.com/gms_s/1617208168_462x250_Shaun-the-sheep-baahmy-golf.jpg',
-        cathegories: ['best', 'action'],
+        categories: ['best', 'action'],
         iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/167007" width="900" height="550" frameborder="no" scrolling="no"></iframe>'
     },
     {
         name: 'Stickman Archer 2',
         image: 'https://files.cdn.spilcloud.com/thumbs-3-1/200X120_170631_1503928241.png',
-        cathegories: ['best', 'sport'],
+        categories: ['best', 'sport'],
         iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/144162" width="800" height="500" frameborder="no" scrolling="no"></iframe>'
-    },
-    {
-        name: 'Police Chase',
-        image: 'https://www.freeonlinegames.com/games/163946/medium.jpg?1594827083',
-        cathegories: ['best', 'action'],
-        iFrameData: '<iframe src="http://www.freeonlinegames.com/embed/163946" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
     },
     {
         name: 'Break Tris',
         image: 'https://www.htmlgames.com/uploaded/thumb/bricktetris300200.jpg',
-        cathegories: ['best', 'action'],
+        categories: ['best', 'action', 'logical'],
         iFrameData: '<iframe src="https://cdn.htmlgames.com/BreakTris/" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
     },
     {
         name: 'Brain Trainer',
         image: 'https://www.mindgames.com/uploaded/thumb/tinglybraintrainer300.jpg',
-        cathegories: ['best', 'action'],
+        categories: ['best', 'logical'],
         iFrameData: '<iframe src="https://games.coolgames.com/brain-trainer/en/3.0/index.html" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
     },
     {
         name: '2048 UFO',
         image: 'https://www.htmlgames.com/uploaded/thumb/2048ufo300.jpg',
-        cathegories: ['best', 'action'],
+        categories: ['best', 'logical'],
         iFrameData: '<iframe id="gameFrame" src="https://cdn.htmlgames.com/2048UFO/index.html?npa=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay" style="width: 100%; height: 480px; display: block;"></iframe>'
     }
 ]
 
-let contentContainer = document.querySelector('#content-container')
-const htmlListOfGames = listOfGames.map(gameObject => {
+function createCardForGame(gameObject) {
     return `
     <div id="${gameObject.name + 'Card'}" class="card cardHover" style="width: 13rem; margin: 5px; ">
         <img class="card-img-top" src=${gameObject.image} alt=${gameObject.name}>
@@ -85,9 +78,15 @@ const htmlListOfGames = listOfGames.map(gameObject => {
             <a id="${gameObject.name + 'CardButton'}" href="#" class="btn btn-primary" style="width: 100%;">Play!</a>
         </div>
     </div>`
-})
+}
 
+let contentContainer = document.querySelector('#content-container')
+const htmlListOfGames = listOfGames.map(gameObject => createCardForGame(gameObject))
 contentContainer.innerHTML = htmlListOfGames
+
+// we also want to have all games when clicking home butting
+const homeButton = document.querySelector('#HomeButton')
+homeButton.addEventListener('click', (event) => { contentContainer.innerHTML = htmlListOfGames }, false)
 
 // set even handlers
 listOfGames.forEach(gameObject => {
@@ -102,6 +101,36 @@ listOfGames.forEach(gameObject => {
 
     cardItem.addEventListener('click', eventHanler, false);
 })
+
+// add pages for nav buttons
+function addHandlersForNavButtons() {
+    const idsToModify = [
+        "Action",
+        "Logical",
+        "Puzzle",
+        "Cards",
+        "Board",
+        "Girl",
+        "Sport"]
+
+    idsToModify.forEach(cathegory => {
+        const navButton = document.getElementById(`${cathegory + 'Button'}`)
+
+        const listOfGamesForCathegoryInHtml = listOfGames
+            .filter(game => game.categories.includes(cathegory.toLowerCase()))
+            .map(game => createCardForGame(game))
+
+        const eventHandler = (evt) => {
+            let contentContainer = document.querySelector('#content-container')
+            contentContainer.innerHTML = listOfGamesForCathegoryInHtml
+        }
+
+        navButton.addEventListener('click', eventHandler, false)
+    })
+}
+addHandlersForNavButtons()
+
+// end: add pages for nav buttons
 
 // https://www.creativebloq.com/how-to/hide-your-javascript-code-from-view-source
 // https://obfuscator.io/
