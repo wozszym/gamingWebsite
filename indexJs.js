@@ -66,6 +66,12 @@ const listOfGames = [
         image: 'https://www.mindgames.com/uploaded/thumb/tinglybraintrainer300.jpg',
         cathegories: ['best', 'action'],
         iFrameData: '<iframe src="https://games.coolgames.com/brain-trainer/en/3.0/index.html" width="960" height="600" frameborder="no" scrolling="no"></iframe>'
+    },
+    {
+        name: '2048 UFO',
+        image: 'https://www.htmlgames.com/uploaded/thumb/2048ufo300.jpg',
+        cathegories: ['best', 'action'],
+        iFrameData: '<iframe id="gameFrame" src="https://cdn.htmlgames.com/2048UFO/index.html?npa=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay" style="width: 100%; height: 480px; display: block;"></iframe>'
     }
 ]
 
@@ -104,6 +110,7 @@ listOfGames.forEach(gameObject => {
 // https://www.coolmathgames.com/
 // https://www.htmlgames.com/
 // https://play.idevgames.co.uk/game/tetris-t-crisis
+// https://www.htmlgames.com
 
 // try to use games from: https://www.htmlgames.com/
 // which seem to be free
